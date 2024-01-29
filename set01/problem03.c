@@ -31,7 +31,7 @@ int input() {
 
 
 int add(int a, int b) {
-    return a + b;
+        return a + b;
 }    
 
 void output(int a, int b, int sum) {

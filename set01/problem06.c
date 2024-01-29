@@ -6,7 +6,8 @@ int input(int *a, int *b, int *c);
 void compare(int a, int b, int c, int *largest);
 void output(int a, int b, int c, int largest);
 
-int main() {
+int main() 
+{
     int num1, num2, num3, largest;
     input(&num1, &num2, &num3);
     compare(num1, num2, num3, &largest);
