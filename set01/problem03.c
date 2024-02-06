@@ -1,39 +1,30 @@
 // Write a C program to add two numbers using **pass by value**
 #include <stdio.h>
-
 int input();
 int add(int a, int b);
-void output(int a, int b, int sum);
+int output(int a, int b, int sum);
 
-int main() {
+int main()
+{
     int num1, num2, result;
-
-    
     num1 = input();
     num2 = input();
-
-
-    result = add(num1, num2);
-
-    
-    output(num1, num2, result);
-
+    result = add(num1 , num2, result);
     return 0;
 }
 
-
-int input() {
+int input()
+{
     int num;
-    printf("Enter a number: ");
-    scanf("%d", &num);
+    printf("Enter a num");
+    scanf("%d" &num);
     return num;
 }
 
+int add(int a, int b){
+    return a + b;
+}
 
-int add(int a, int b) {
-        return a + b;
-}    
-
-void output(int a, int b, int sum) {
+void output(int a, int b, int sum){
     printf("The sum of %d and %d is %d\n", a, b, sum);
 }
