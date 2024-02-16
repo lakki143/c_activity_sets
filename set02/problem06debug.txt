@@ -1,0 +1,83 @@
+PS C:\Users\DIVYA\c_activity_sets\set02> gdb a.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\DIVYA\c_activity_sets\set02\a.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x401471: file problem06.c, line 12.
+(gdb) r
+Starting program: C:\Users\DIVYA\c_activity_sets\set02/a.exe
+[New Thread 4244.0x29c4]
+[New Thread 4244.0x1c68]
+
+Breakpoint 1, main () at problem06.c:12
+12          input_string(str);
+(gdb) s
+input_string (a=0x61febc "ü_a") at problem06.c:20
+20          printf("Enter a string: ");
+(gdb)
+Enter a string: 21          scanf("%s", a);
+(gdb) s
+s
+22      }
+(gdb) s
+main () at problem06.c:13
+13          str_reverse(str, rev_str);
+(gdb) s
+str_reverse (str=0x61febc "s", rev_str=0x61fe58 ""_a") at problem06.c:25
+25          int length = strlen(str);
+(gdb)
+28          for(i = length - 1, j = 0; i >= 0; i--, j++) {
+(gdb) ss
+Undefined command: "ss".  Try "help".
+(gdb) s
+29              rev_str[j] = str[i];
+(gdb) s
+28          for(i = length - 1, j = 0; i >= 0; i--, j++) {
+(gdb) s
+31          rev_str[j] = '\0';
+(gdb) s
+32      }
+(gdb) s
+main () at problem06.c:14
+14          output(str, rev_str);
+(gdb) s
+output (a=0x61febc "s", reverse_a=0x61fe58 "s") at problem06.c:35
+35          printf("Original string: %s\n", a);
+(gdb) s
+Original string: s
+36          printf("Reversed string: %s\n", reverse_a);
+(gdb) s
+Reversed string: s
+37      }(gdb) s
+main () at problem06.c:16
+16          return 0;
+(gdb) s
+17      }
+(gdb) s
+0x00401288 in __register_frame_info ()
+(gdb) s
+Single stepping until exit from function __register_frame_info,
+which has no line number information.
+0x0040128a in __register_frame_info ()
+(gdb) s
+Single stepping until exit from function __register_frame_info,
+which has no line number information.
+0x0040128f in __register_frame_info ()
+(gdb) r
+The program being debugged has been started already.
+Start it from the beginning? (y or n) y
+error return ../../gdb-7.6.1/gdb/windows-nat.c:1275 was 5
+Starting program: C:\Users\DIVYA\c_activity_sets\set02/a.exe
+[New Thread 2308.0x3718]
+[New Thread 2308.0x1678]
+
+Breakpoint 1, main () at problem06.c:12
+12          input_string(str);
+(gdb)
