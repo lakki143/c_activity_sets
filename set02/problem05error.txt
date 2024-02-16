@@ -1,0 +1,102 @@
+PS C:\Users\DIVYA\c_activity_sets> git add .
+PS C:\Users\DIVYA\c_activity_sets> git commit -m "test"
+On branch main
+Your branch is ahead of 'origin/main' by 11 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS C:\Users\DIVYA\c_activity_sets> git push .
+Everything up-to-date
+PS C:\Users\DIVYA\c_activity_sets> cd set02
+PS C:\Users\DIVYA\c_activity_sets\set02> gcc problem05.c -O0 -g
+PS C:\Users\DIVYA\c_activity_sets\set02> gdb a.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\DIVYA\c_activity_sets\set02\a.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x40146e: file problem05.c, line 8.
+(gdb) r
+Starting program: C:\Users\DIVYA\c_activity_sets\set02/a.exe
+[New Thread 9344.0x594c]
+[New Thread 9344.0x3ec4]
+
+Breakpoint 1, main () at problem05.c:8
+8           int num1 = input();
+(gdb) s
+input () at problem05.c:17
+17          printf("Enter a number: ");
+(gdb) s
+Enter a number: 18          scanf("%d", &num);
+(gdb) s
+s
+19          return num;
+(gdb) s
+20      }
+(gdb) s
+main () at problem05.c:9
+9           int num2 = input();
+(gdb) s
+input () at problem05.c:17
+17          printf("Enter a number: ");
+(gdb) s
+Enter a number: 18          scanf("%d", &num);
+(gdb) s
+19          return num;
+(gdb) s
+20      }
+(gdb) s
+main () at problem05.c:10
+10          int gcd = find_gcd(num1, num2);
+(gdb) s
+find_gcd (a=6422476, b=6422476) at problem05.c:24
+24          while (b != 0) {
+(gdb) s
+25              remainder = a % b;
+(gdb) s
+26              a = b;
+(gdb) s
+27              b = remainder;
+(gdb) s
+24          while (b != 0) {
+(gdb) s
+29          return a;
+(gdb) s
+30      }
+(gdb) s 
+main () at problem05.c:11
+11          output(num1, num2, gcd);
+(gdb) s
+output (a=6422476, b=6422476, gcd=6422476) at problem05.c:33
+33          printf("The GCD of %d and %d is %d\n", a, b, gcd);
+(gdb) s
+The GCD of 6422476 and 6422476 is 6422476
+34      }(gdb) s
+main () at problem05.c:12
+12          return 0;
+(gdb) s
+13      }
+(gdb) s
+0x00401288 in __register_frame_info ()
+(gdb) s
+Single stepping until exit from function __register_frame_info,
+which has no line number information.
+0x0040128a in __register_frame_info ()
+(gdb) s
+Single stepping until exit from function __register_frame_info,
+which has no line number information.
+0x0040128f in __register_frame_info ()
+(gdb) q
+A debugging session is active.
+
+        Inferior 1 [process 9344] will be killed.
+
+Quit anyway? (y or n) y
+error return ../../gdb-7.6.1/gdb/windows-nat.c:1275 was 5
+PS C:\Users\DIVYA\c_activity_sets\set02> 
