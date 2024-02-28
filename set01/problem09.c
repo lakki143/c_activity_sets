@@ -23,7 +23,8 @@ float input() {
     return num;
 }
 
-float square_root(float n) {
+float square_root(float n) 
+{
     
     float x = n;
     float y = 1;
